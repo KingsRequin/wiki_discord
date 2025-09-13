@@ -97,6 +97,7 @@ main {
   background: #ffffff;
   box-shadow: 8px 8px 0 var(--color-dark);
   position: relative;
+  border-radius: 12px;
 }
 
 /* Style des titres de section */
@@ -127,6 +128,7 @@ code {
   padding: 0.75rem;
   border: 3px dashed var(--color-dark);
   margin-bottom: 1rem;
+  border-radius: 8px;
 }
 
 /* Jeux de couleurs appliqués aux sections via classes utilitaires */
@@ -138,6 +140,14 @@ code {
 .bg-orange { background: var(--color-orange); }
 .bg-pink { background: var(--color-pink); }
 
+/* Image d'exemple pour illustrer le rendu */
+.example-img {
+  display: block;
+  max-width: 100%;
+  margin-top: 0.5rem;
+  border: 3px solid var(--color-dark);
+  border-radius: 8px;
+}
 /* Ajustement pour le pied de page */
 footer {
   background: var(--color-dark);

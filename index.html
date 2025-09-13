@@ -25,6 +25,7 @@
       dans vos messages pour les rendre plus lisibles et percutants. Chaque
       section explique la syntaxe à employer, fournit un exemple de code et
       montre le rendu attendu.</p>
+      <p>Pour illustrer un exemple, insérez une image avec la balise <code>&lt;img src="URL" alt="" class="example-img"&gt;</code> juste après le rendu.</p>
     </section>
 
     <!-- Gras -->
@@ -92,6 +93,15 @@
       </div>
     </section>
 
+    <!-- Texte réduit -->
+    <section class="card bg-pink">
+      <h2>Texte réduit</h2>
+      <p>Pour obtenir un texte plus petit, démarrez la ligne avec <code>-#</code>.</p>
+      <pre><code>-# mini texte</code></pre>
+      <div class="result"><small>mini texte</small></div>
+      <img src="" alt="Image exemple texte réduit" class="example-img">
+    </section>
+
     <!-- Liens -->
     <section class="card bg-yellow">
       <h2>Liens cliquables</h2>
@@ -102,29 +112,58 @@
       <div class="result"><a href="https://discord.com/">Visitez Discord</a></div>
     </section>
 
+    <!-- Masquer l'intégration d'un lien -->
+    <section class="card bg-purple">
+      <h2>Masquer l'intégration d'un lien</h2>
+      <p>Pour empêcher Discord d'afficher un aperçu, placez l'URL entre chevrons. Cette méthode fonctionne aussi avec les liens hypertexte.</p>
+      <pre><code>&lt;https://www.youtube.com/&gt;</code></pre>
+      <div class="result"><a href="https://www.youtube.com/">&lt;https://www.youtube.com/&gt;</a></div>
+      <pre><code>[Une vidéo](&lt;https://www.youtube.com/&gt;)</code></pre>
+      <div class="result"><a href="https://www.youtube.com/">Une vidéo</a></div>
+      <img src="" alt="Image exemple lien sans intégration" class="example-img">
+    </section>
+
     <!-- Listes -->
     <section class="card bg-green">
       <h2>Listes</h2>
       <p>Pour créer une liste à puces, commencez chaque ligne par un tiret (-)
       ou un astérisque (*). Pour une liste numérotée, utilisez 1., 2., 3., etc.
-      Discord convertira automatiquement votre texte en liste.</p>
+      Ajoutez deux espaces devant un élément pour créer une sous-liste.</p>
       <pre><code>- Premier élément
-- Deuxième élément
-- Troisième élément
+  - sous élément 1
+  - sous élément 2
+    - sous sous élément 1
 
 1. Étape une
-2. Étape deux
-3. Étape trois</code></pre>
+  1. Sous-étape 1
+  2. Sous-étape 2
+    1. Sous sous-étape 1
+2. Étape deux</code></pre>
       <div class="result">
         <ul>
-          <li>Premier élément</li>
-          <li>Deuxième élément</li>
-          <li>Troisième élément</li>
+          <li>Premier élément
+            <ul>
+              <li>sous élément 1</li>
+              <li>sous élément 2
+                <ul>
+                  <li>sous sous élément 1</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
         </ul>
         <ol>
-          <li>Étape une</li>
+          <li>Étape une
+            <ol>
+              <li>Sous-étape 1</li>
+              <li>Sous-étape 2
+                <ol>
+                  <li>Sous sous-étape 1</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
           <li>Étape deux</li>
-          <li>Étape trois</li>
         </ol>
       </div>
     </section>
