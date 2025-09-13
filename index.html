@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wiki Markdown Discord</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- En‑tête du site -->
+  <header>
+    <h1>Wiki Markdown Discord</h1>
+    <nav>
+      <a href="index.html">Wiki</a>
+      <a href="liens.html">Liens utiles</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bg-yellow">
+      <h2>Introduction</h2>
+      <p>Bienvenue sur ce wiki dédié au formatage Markdown dans Discord. Vous
+      trouverez ici les principaux styles de texte que vous pouvez utiliser
+      dans vos messages pour les rendre plus lisibles et percutants. Chaque
+      section explique la syntaxe à employer, fournit un exemple de code et
+      montre le rendu attendu.</p>
+    </section>
+
+    <!-- Gras -->
+    <section class="bg-green">
+      <h2>Texte en gras</h2>
+      <p>Pour souligner un passage important, entourez‑le de deux astérisques.
+      Discord appliquera automatiquement une mise en gras du texte.</p>
+      <pre><code>**Ceci est un texte en gras**</code></pre>
+      <div class="result"><strong>Ceci est un texte en gras</strong></div>
+    </section>
+
+    <!-- Italique -->
+    <section class="bg-blue">
+      <h2>Italique</h2>
+      <p>L’italique est utile pour mettre en avant des titres d’œuvres ou
+      ajouter une nuance dans votre message. Entourez le texte d’un astérisque
+      pour appliquer ce style.</p>
+      <pre><code>*Ceci est en italique*</code></pre>
+      <div class="result"><em>Ceci est en italique</em></div>
+    </section>
+
+    <!-- Barré -->
+    <section class="bg-purple">
+      <h2>Barré (strikethrough)</h2>
+      <p>Pour rayer une partie de votre message tout en laissant la lecture du
+      texte original, utilisez deux tildes (~) au début et à la fin de la
+      portion concernée.</p>
+      <pre><code>~~Je change d’avis~~</code></pre>
+      <div class="result"><del>Je change d’avis</del></div>
+    </section>
+
+    <!-- Souligné -->
+    <section class="bg-orange">
+      <h2>Souligné</h2>
+      <p>Pour souligner un mot ou une expression, placez deux traits bas ( _ )
+      avant et après le texte.</p>
+      <pre><code>__Titre souligné__</code></pre>
+      <div class="result"><span style="text-decoration:underline;">Titre souligné</span></div>
+    </section>
+
+    <!-- Spoiler -->
+    <section class="bg-pink">
+      <h2>Spoiler</h2>
+      <p>Pour masquer temporairement une information (par exemple un spoiler),
+      encadrez‑la avec deux barres verticales (pipes). Le texte ne sera
+      visible qu’après un clic.</p>
+      <pre><code>||Révélation secrète||</code></pre>
+      <div class="result"><span style="background:#000;color:#000;padding:0.2rem 0.4rem;border-radius:3px;">Révélation secrète</span></div>
+    </section>
+
+    <!-- Titres -->
+    <section class="bg-red">
+      <h2>Titres (headers)</h2>
+      <p>Pour hiérarchiser un long message, utilisez des dièses (#) en début
+      de ligne. Plus il y a de dièses, plus le titre est petit.</p>
+      <pre><code># Titre niveau 1
+## Titre niveau 2
+### Titre niveau 3
+#### Titre niveau 4</code></pre>
+      <div class="result">
+        <h1 style="margin:0;">Titre niveau 1</h1>
+        <h2 style="margin:0;">Titre niveau 2</h2>
+        <h3 style="margin:0;">Titre niveau 3</h3>
+        <h4 style="margin:0;">Titre niveau 4</h4>
+      </div>
+    </section>
+
+    <!-- Liens -->
+    <section class="bg-yellow">
+      <h2>Liens cliquables</h2>
+      <p>Pour créer un lien hypertexte sur un mot, entourez le mot de crochets
+      et placez l’URL entre parenthèses juste après. Discord affichera le mot
+      souligné en bleu et le rendra cliquable.</p>
+      <pre><code>[Visitez Discord](https://discord.com/)</code></pre>
+      <div class="result"><a href="https://discord.com/">Visitez Discord</a></div>
+    </section>
+
+    <!-- Listes -->
+    <section class="bg-green">
+      <h2>Listes</h2>
+      <p>Pour créer une liste à puces, commencez chaque ligne par un tiret (-)
+      ou un astérisque (*). Pour une liste numérotée, utilisez 1., 2., 3., etc.
+      Discord convertira automatiquement votre texte en liste.</p>
+      <pre><code>- Premier élément
+- Deuxième élément
+- Troisième élément
+
+1. Étape une
+2. Étape deux
+3. Étape trois</code></pre>
+      <div class="result">
+        <ul>
+          <li>Premier élément</li>
+          <li>Deuxième élément</li>
+          <li>Troisième élément</li>
+        </ul>
+        <ol>
+          <li>Étape une</li>
+          <li>Étape deux</li>
+          <li>Étape trois</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Citation (blockquote) -->
+    <section class="bg-blue">
+      <h2>Citation</h2>
+      <p>Pour mettre en avant une citation ou une remarque, commencez la ligne
+      par le signe supérieur (>) suivi d’un espace. Discord affichera le texte
+      sur un fond distinct.</p>
+      <pre><code>> Ceci est une citation inspirante</code></pre>
+      <div class="result" style="background:#fffbe6; border-left:5px solid var(--color-orange);">
+        Ceci est une citation inspirante
+      </div>
+    </section>
+
+    <!-- Code inline -->
+    <section class="bg-purple">
+      <h2>Code en ligne</h2>
+      <p>Pour mettre en valeur un mot ou une expression de code dans une
+      phrase, entourez le texte d’un seul backtick (`). Il sera rendu dans
+      une police monospace.</p>
+      <pre><code>`console.log("Bonjour")`</code></pre>
+      <div class="result"><code>console.log("Bonjour")</code></div>
+    </section>
+
+    <!-- Bloc de code -->
+    <section class="bg-orange">
+      <h2>Bloc de code</h2>
+      <p>Pour partager plusieurs lignes de code, utilisez trois backticks avant
+      et après votre bloc. Vous pouvez spécifier un langage pour bénéficier
+      d’une coloration syntaxique.</p>
+      <pre><code>```python
+def saluer(nom):
+    print(f"Bonjour {nom} !")
+
+saluer("Alice")
+```</code></pre>
+      <div class="result" style="background:#0d3b66;color:#faf0ca;padding:0.5rem;">
+<pre style="margin:0;color:inherit;">def saluer(nom):
+    print(f"Bonjour {nom} !")
+
+saluer("Alice")</pre>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Ce wiki a été conçu pour vous aider à maîtriser les différents formats
+    Markdown pris en charge par Discord. N’hésitez pas à consulter la page des
+    liens utiles pour découvrir d’autres outils.</p>
+  </footer>
+</body>
+</html>
